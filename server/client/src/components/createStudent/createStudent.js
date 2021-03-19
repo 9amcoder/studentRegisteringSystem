@@ -28,8 +28,10 @@ export default function CreateStudent() {
     program: ''
   })
   const createStudent = () => {
-    //from front-end the date goes to the back-end prot 5000
-    axios.post('http://localhost:5000/students', student)
+    //the date goes to the back-endfrom front-end prot 5000
+    axios.post('http://localhost:5000/students', student).then(() => {
+      window.location.reload(false)
+    })
   }
 
   return (
