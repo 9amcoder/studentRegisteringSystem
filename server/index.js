@@ -9,8 +9,9 @@ const app = express();
 
 app.use(bodyParser.json({limit: "20mb", extended:true }))
 app.use(bodyParser.urlencoded({limit: "20mb", extended:true }))
-app.use('/students', studentRoutes);
 app.use(cors());
+app.use('/students', studentRoutes);
+
 
 //connect to MongoDB
 const CONNECTION_URL = 'mongodb+srv://dbUser01:Password123@cluster0.cc8fo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
